@@ -22,7 +22,7 @@ const BootstrapButton = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#e76f51",
     borderColor: "#e76f51",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -36,7 +36,7 @@ const BootstrapButton2 = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#2a9d8f",
     borderColor: "#2a9d8f",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -78,7 +78,7 @@ export default function MySuggestions(props) {
             alignItems="center"
             className={classes.root}
           >
-            <Grid item key={1} xs={4}>
+            <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -87,10 +87,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={1} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#404a8a" }} />
             </Grid>
-            <Grid item key={1} xs={4}>
+            <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -100,7 +100,7 @@ export default function MySuggestions(props) {
               </Card>
             </Grid>
 
-            <Grid item key={1} xs={3}>
+            <Grid item xs={3}>
               <GroupIcon fontSize="large" style={{ paddingLeft: "3px" }} />
               <BootstrapButton2
                 variant="contained"
@@ -120,7 +120,7 @@ export default function MySuggestions(props) {
               </BootstrapButton>
             </Grid>
 
-            <Grid item key={1} xs={4}>
+            <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -129,10 +129,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={1} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#404a8a" }} />
             </Grid>
-            <Grid item key={1} xs={4}>
+            <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -142,7 +142,7 @@ export default function MySuggestions(props) {
               </Card>
             </Grid>
 
-            <Grid item key={1} xs={3}>
+            <Grid item xs={3}>
               <GroupIcon fontSize="large" style={{ paddingLeft: "3px" }} />
               <BootstrapButton2
                 variant="contained"
@@ -168,7 +168,7 @@ export default function MySuggestions(props) {
           Two-part trades
         </Typography>
         <Typography
-          variant="caption text"
+          variant="caption"
           align="left"
           color="textSecondary"
           paragraph
@@ -184,7 +184,7 @@ export default function MySuggestions(props) {
             alignItems="center"
             className={classes.root}
           >
-            <Grid item key={1} xs={2}>
+            <Grid item xs={2}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -193,10 +193,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={1} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
             </Grid>
-            <Grid item key={1} xs={2}>
+            <Grid item xs={2}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -205,10 +205,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={1} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
             </Grid>
-            <Grid item key={1} xs={3}>
+            <Grid item xs={3}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -217,7 +217,7 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={1} xs={3}>
+            <Grid item xs={3}>
               <BootstrapButton2
                 variant="contained"
                 color="primary"
@@ -236,7 +236,7 @@ export default function MySuggestions(props) {
               </BootstrapButton>
             </Grid>
 
-            <Grid item key={2} xs={2}>
+            <Grid item xs={2}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -245,10 +245,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={2} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
             </Grid>
-            <Grid item key={2} xs={2}>
+            <Grid item xs={2}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -257,10 +257,10 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={2} xs={1}>
+            <Grid item xs={1}>
               <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
             </Grid>
-            <Grid item key={2} xs={3}>
+            <Grid item xs={3}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -269,7 +269,7 @@ export default function MySuggestions(props) {
                 />
               </Card>
             </Grid>
-            <Grid item key={2} xs={3}>
+            <Grid item xs={3}>
               <BootstrapButton2
                 variant="contained"
                 color="primary"

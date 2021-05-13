@@ -39,7 +39,7 @@ const BootstrapButton2 = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#2a9d8f",
     borderColor: "#2a9d8f",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -72,122 +72,110 @@ export default function Listing(props) {
     return (
       <>
         <div className={classes.heroContent}>
-          {currentListing ? (
-            <div>
-              <Grid
-                container
-                spacing={2}
-                direction="column"
-                alignItems="center"
-              >
-                <Grid className="grid" item xs={12}>
-                  <Image
-                    width={350}
-                    src={currentListing.picture}
-                    style={{ borderRadius: "10px", marginBottom: "15px" }}
-                  />
-                </Grid>
+          <div>
+            <Grid container spacing={2} direction="column" alignItems="center">
+              <Grid className="grid" item xs={12}>
+                <Image
+                  width={350}
+                  src={currentListing.picture}
+                  style={{ borderRadius: "10px", marginBottom: "15px" }}
+                />
               </Grid>
-              <Grid
-                container
-                spacing={2}
-                direction="row"
-                alignItems="center"
-                justify="space-evenly"
-              >
-                <Grid item xs={7} style={{ marginBottom: "0px" }}>
-                  <Typography component="h1" align="left" variant="h5">
-                    {currentListing.name}
-                  </Typography>
-                </Grid>
-                <Grid item xs={3}>
-                  <BootstrapButton2
-                    variant="contained"
-                    color="primary"
-                    disableRipple
-                    className={classes.margin}
-                    onClick={toOffer}
-                  >
-                    Propose a trade!
-                  </BootstrapButton2>
-                </Grid>
+            </Grid>
+            <Grid
+              container
+              spacing={2}
+              direction="row"
+              alignItems="center"
+              justify="space-evenly"
+            >
+              <Grid item xs={7} style={{ marginBottom: "0px" }}>
+                <Typography component="h1" align="left" variant="h5">
+                  {currentListing.name}
+                </Typography>
               </Grid>
-              <Typography
-                component="h1"
-                align="left"
-                variant="subtitle1"
-                style={{ padding: "8px 21px 8px 21px" }}
-                color="textSecondary"
-              >
-                {currentListing.description}
-              </Typography>
-              <Divider />
-              <Grid
-                container
-                spacing={2}
-                direction="column"
-                alignItems="center"
-                justify="space-evenly"
-              >
-                <Grid item xs={12}>
-                  <strong>
-                    {currentListing.user.first_name}{" "}
-                    {currentListing.user.last_name}
-                  </strong>
-                  {currentListing.neighbourhood.name},{" "}
-                  {currentListing.city.name}
-                  <Button
-                    onClick={toUserProfile}
-                    startIcon={
-                      <Avatar
-                        src={currentListing.user.profile_picture}
-                        style={{ marginLeft: "10px" }}
-                      />
-                    }
-                  ></Button>
-                </Grid>
+              <Grid item xs={3}>
+                <BootstrapButton2
+                  variant="contained"
+                  color="primary"
+                  disableRipple
+                  className={classes.margin}
+                  onClick={toOffer}
+                >
+                  Propose a trade!
+                </BootstrapButton2>
               </Grid>
-              <Divider />
-              <Typography
-                component="h1"
-                align="justify"
-                variant="h6"
-                style={{ padding: "8px 21px" }}
-              >
-                Trade history
-              </Typography>
-              <Grid
-                container
-                spacing={0}
-                direction="row"
-                alignItems="center"
-                justify="flex-start"
-                style={{ padding: "8px 21px" }}
-              >
-                {currentListing.history.map((prevTrade) => (
-                  <>
-                    <Grid item xs={1}>
-                      <ArrowForwardIcon
-                        style={{ fontSize: 20 }}
-                        color="primary"
-                      />
-                    </Grid>
-                    <Grid item xs={3}>
-                      <Image
-                        width={50}
-                        src={prevTrade}
-                        style={{ borderRadius: "10px" }}
-                      />
-                    </Grid>
-                  </>
-                ))}
+            </Grid>
+            <Typography
+              component="h1"
+              align="left"
+              variant="subtitle1"
+              style={{ padding: "8px 21px 8px 21px" }}
+              color="textSecondary"
+            >
+              {currentListing.description}
+            </Typography>
+            <Divider />
+            <Grid
+              container
+              spacing={2}
+              direction="column"
+              alignItems="center"
+              justify="space-evenly"
+            >
+              <Grid item xs={12}>
+                <strong>
+                  {currentListing.user.first_name}{" "}
+                  {currentListing.user.last_name}
+                </strong>
+                {currentListing.neighbourhood.name}, {currentListing.city.name}
+                <Button
+                  onClick={toUserProfile}
+                  startIcon={
+                    <Avatar
+                      src={currentListing.user.profile_picture}
+                      style={{ marginLeft: "10px" }}
+                    />
+                  }
+                ></Button>
               </Grid>
-            </div>
-          ) : (
-            <div className={classes.progress}>
-              <CircularProgress />
-            </div>
-          )}
+            </Grid>
+            <Divider />
+            <Typography
+              component="h1"
+              align="justify"
+              variant="h6"
+              style={{ padding: "8px 21px" }}
+            >
+              Trade history
+            </Typography>
+            <Grid
+              container
+              spacing={0}
+              direction="row"
+              alignItems="center"
+              justify="flex-start"
+              style={{ padding: "8px 21px" }}
+            >
+              {currentListing.history.map((prevTrade) => (
+                <>
+                  <Grid item xs={1}>
+                    <ArrowForwardIcon
+                      style={{ fontSize: 20 }}
+                      color="primary"
+                    />
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Image
+                      width={50}
+                      src={prevTrade}
+                      style={{ borderRadius: "10px" }}
+                    />
+                  </Grid>
+                </>
+              ))}
+            </Grid>
+          </div>
         </div>
       </>
     );

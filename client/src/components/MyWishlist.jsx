@@ -43,7 +43,7 @@ const BootstrapButton2 = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#2a9d8f",
     borderColor: "#2a9d8f",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -58,7 +58,7 @@ export default function MyWishlist(props) {
   let relevantAndAvailableListings;
 
   // if the user has wishlist entries, retrieve details and relevant listings:
-  if (wishesNotNull.filter((wish) => wish.user_id === userId)) {
+  if (wishesNotNull) {
     userWishes = wishesNotNull.filter((wish) => wish.user_id === userId);
     userWishCategories = userWishes.map((wish) => wish.category_id);
     relevantListings = props.listings
@@ -133,13 +133,13 @@ export default function MyWishlist(props) {
               fullWidth
               margin="normal"
               size="small"
-              name="category"
+              defaultValue = ""
               style={{ height: "18px" }}
               select
               onChange={categorySelect}
             >
               {props.categories.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
+                <MenuItem value={option.value}>
                   {option.label}
                 </MenuItem>
               ))}
@@ -187,12 +187,11 @@ export default function MyWishlist(props) {
               alignItems="center"
               spacing={0}
               direction="row"
-              // justify="center"
             >
               {cards.map((card) => (
                 <>
                   <Grid item xs={9}>
-                    <Typography variant="h7" component="h3">
+                    <Typography variant="subtitle1">
                       {userWishes[card].name}
                     </Typography>
                   </Grid>

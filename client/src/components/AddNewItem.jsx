@@ -21,7 +21,7 @@ const BootstrapButton2 = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#2a9d8f",
     borderColor: "#2a9d8f",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -150,6 +150,7 @@ export default function AddNewItem(props) {
               fullWidth
               margin="normal"
               select
+              defaultValue = ""
               onChange={handleChange}
             >
               {props.categories.map((option) => (

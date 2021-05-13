@@ -29,7 +29,7 @@ const BootstrapButton2 = withStyles({
     fontFamily: [
       "Roboto",
       "sans-serif"
-    ].join(","),
+    ],
   },
 })(Button);
 
@@ -42,6 +42,7 @@ const CustomTypography = withStyles({
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    paddingTop: "15px",
   },
   heroContent: {
     padding: theme.spacing(8, 0, 12),
@@ -114,7 +115,7 @@ export default function ProposeTrade(props) {
     <>
       <CssBaseline />
       {submitting ? (
-        <Grid container direction="column" alignItems="center" justify="center">
+        <Grid container direction="column" alignItems="center">
           <Grid item xs={10}>
             <CustomTypography
               variant="subtitle1"
@@ -122,7 +123,7 @@ export default function ProposeTrade(props) {
               style={{
                 backgroundColor: "#e9c46a",
                 border: "2.5px solid #4958b6",
-                padding: "30px",
+                padding: "25px",
                 borderRadius: "10px",
                 margin: "80% 6.5% 0% 6.5%",
               }}
@@ -133,7 +134,7 @@ export default function ProposeTrade(props) {
         </Grid>
       ) : (
         <div className={classes.heroContent}>
-          <Typography variant="h6" align="left" color="textPrimary" paragraph>
+          <Typography variant="h5" align="left" color="textPrimary">
             Propose a trade
           </Typography>
 
@@ -148,7 +149,7 @@ export default function ProposeTrade(props) {
             >
               {cards.map((card) => (
                 <>
-                  <Grid className="grid" item key={card} xs={5} sm={6} md={4}>
+                  <Grid className="grid" item xs={5} sm={6} md={4}>
                     <Card className={classes.card}>
                       <CardMedia
                         className={classes.cardMedia}
@@ -162,10 +163,10 @@ export default function ProposeTrade(props) {
                       </CardContent>
                     </Card>
                   </Grid>
-                  <Grid item key={card} xs={2} sm={2} md={4}>
+                  <Grid item xs={2} sm={2} md={4}>
                     <AutorenewIcon style={{ fontSize: 35 }} color="primary" />
                   </Grid>
-                  <Grid item key={card} xs={5} sm={6} md={4}>
+                  <Grid item xs={5} sm={6} md={4}>
                     <Card className={classes.card}>
                       <CardMedia
                         className={classes.cardMedia}

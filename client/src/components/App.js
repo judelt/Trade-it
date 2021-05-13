@@ -79,7 +79,7 @@ export default function App() {
   return (
     <>
       <Router>
-        <Container maxWidth="s">
+        <Container maxWidth="xs">
           <div className="App">
             <header className="App-header">
               <AppBar elevation={0} className={classes.root}>

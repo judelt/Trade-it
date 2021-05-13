@@ -24,7 +24,7 @@ const BootstrapButton3 = withStyles({
     lineHeight: 1.5,
     backgroundColor: "#404a8a",
     borderColor: "#404a8a",
-    fontFamily: ["Roboto", "sans-serif"].join(","),
+    fontFamily: ["Roboto", "sans-serif"],
   },
 })(Button);
 
@@ -167,7 +167,6 @@ export default function Profile(props) {
                     <Typography
                       variant="h5"
                       align="left"
-                      color="subtitle 2"
                       style={{ paddingTop: "8px" }}
                     >
                       Listings by user
@@ -184,7 +183,6 @@ export default function Profile(props) {
                 <Typography
                   variant="h5"
                   align="left"
-                  color="subtitle 2"
                   paragraph
                   style={{ paddingTop: "8px" }}
                 >

@@ -146,7 +146,7 @@ export default function AcceptedProposal(props) {
       <CssBaseline />
 
       <div className={classes.heroContent}>
-        <Typography variant="h6" align="left" color="textPrimary" paragraph>
+        <Typography variant="h5" align="left" color="textPrimary" paragraph>
           Ready for trade:
         </Typography>
 

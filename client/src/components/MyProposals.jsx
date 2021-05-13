@@ -145,7 +145,7 @@ export default function MyProposals(props) {
           >
             {tradesProposedToUserCards.map((card) => (
               <>
-                <Grid item key={card} xs={4}>
+                <Grid item xs={4}>
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.cardMedia}
@@ -154,10 +154,10 @@ export default function MyProposals(props) {
                     />
                   </Card>
                 </Grid>
-                <Grid item key={card} xs={1}>
+                <Grid item xs={1}>
                   <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
                 </Grid>
-                <Grid item key={card} xs={4}>
+                <Grid item xs={4}>
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.cardMedia}
@@ -166,8 +166,8 @@ export default function MyProposals(props) {
                     />
                   </Card>
                 </Grid>
-                <Grid item key={card} xs={3}>
-                  <Typography gutterBottom variant="h7">
+                <Grid item xs={3}>
+                  <Typography gutterBottom variant="subtitle2">
                     {props.tradesProposedToUser[card].is_accepted
                       ? `Trade accepted!`
                       : `2 days ago`}
@@ -228,7 +228,7 @@ export default function MyProposals(props) {
           >
             {userProposalCards.map((card) => (
               <>
-                <Grid item key={card} xs={4}>
+                <Grid item xs={4}>
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.cardMedia}
@@ -237,10 +237,10 @@ export default function MyProposals(props) {
                     />
                   </Card>
                 </Grid>
-                <Grid item key={card} xs={1}>
+                <Grid item xs={1}>
                   <AutorenewIcon style={{ fontSize: 20, color: "#4958b6" }} />
                 </Grid>
-                <Grid item key={card} xs={4}>
+                <Grid item xs={4}>
                   <Card className={classes.card}>
                     <CardMedia
                       className={classes.cardMedia}
@@ -249,8 +249,8 @@ export default function MyProposals(props) {
                     />
                   </Card>
                 </Grid>
-                <Grid item key={card} xs={3}>
-                  <Typography gutterBottom variant="h7">
+                <Grid item xs={3}>
+                  <Typography gutterBottom variant="subtitle2">
                     {props.userProposals[card].is_accepted
                       ? `Accepted`
                       : `Pending`}

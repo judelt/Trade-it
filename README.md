@@ -1,6 +1,6 @@
 # Trade it
 
-A web app for trading items you no longer need for others you want. Don't buy, just trade it and help create a more sustainable future.<br />
+Proof of concept web application for trading items you no longer need for others you want. Don't buy, just trade it and help create a more sustainable future.<br />
 I came out with the idea for this app idea inspired by the story of Kyle Macdonald, a Canadian blogger who famously bartered his way from "one red paperclip" to a house in a sequence of 14 trades.<br/><br/>
 Back-end: Rails, PostgreSQL. <br/>
 Front-end: React, CSS, Material UI, Ant Design.<br/>
